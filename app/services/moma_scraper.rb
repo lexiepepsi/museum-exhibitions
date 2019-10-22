@@ -16,25 +16,45 @@ class MomaScraper
     poop = []
     n = 0
     current_exhibitions.each do |exhibition|
-        if n == 0
-          poop << exhibition.text
+      if n == 0
+        poop << exhibition.text
           exhibitions << exhibition.text
-          n += 1
-        elsif n == 2
+        n += 1
+      elsif n == 2
+        n = 0
+        poop = []
+      elsif n == 1
+        poop << exhibition.text
+        if poop[0] == poop[1]
           n = 0
           poop = []
-        elsif n == 1
-          poop << exhibition.text
-          if poop[0] == poop[1]
-            n = 0
-            poop = []
-          else
-            n += 1
-          end
-        end  
+        else
+          n += 1
+        end
+      end  
     end
 
-    exhibitions
+    current_dates = second_section.css('p.typography--baseline-spacing')
+    dates = []
+    current_dates.each do |date|
+      if date.text.include?("Through")
+        dates << date.text
+      end
+    end
+
+    combo = []
+    d = 0
+    exhibitions.each do |exhibition|
+      # exhibition = {
+      #   title: exhibition
+      #   dates: dates[d]
+      # }
+      combo << exhibition
+      combo << dates[d]
+      d += 1
+    end
+
+    combo
 
     # byebug
   end

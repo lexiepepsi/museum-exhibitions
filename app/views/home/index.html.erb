@@ -12,8 +12,15 @@
   <% end %>
 
   <h3><a href="https://www.moma.org/calendar/exhibitions">MoMA</a></h3>
-  <% @moma.each do |exhibition| %>
-    <p> <%= exhibition %></p>
+  <% n = 0 %>
+  <% @moma.each do |combo| %>
+    <% if n == 0 %>
+      <h4> <%= combo %></h4>
+      <% n += 1 %>
+    <% elsif n == 1 %>
+      <p> <%= combo %></p>
+      <% n = 0 %>
+    <% end %>
   <% end %>
 
 </div>
