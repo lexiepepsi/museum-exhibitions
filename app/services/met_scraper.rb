@@ -12,33 +12,38 @@ class MetScraper
 
     titles = []
     general_content.css('p').each do |title|
-      infos = title.text.split("\n")
-      infos.each do |info|
-        if !info.include?(",") && !info.include?("Location")
-          titles << info
-        end
-      end
+      titles << title.text
     end
-    # titles
+    titles
 
-    dates = []
-    general_content.css('p').each do |title|
-      infos = title.text.split("\n")
-      infos.each do |info|
-        if info.include?(",")
-          dates << info
-        end
-      end
-    end
+    # titles = []
+    # general_content.css('p').each do |title|
+    #   infos = title.text.split("\n")
+    #   infos.each do |info|
+    #     if !info.include?(",") && !info.include?("Location")
+    #       titles << info
+    #     end
+    #   end
+    # end
 
-    combo = []
-    d = 0
-    titles.each do |title|
-      combo << title
-      combo << dates[d]
-      d += 1
-    end
+    # dates = []
+    # general_content.css('p').each do |title|
+    #   infos = title.text.split("\n")
+    #   infos.each do |info|
+    #     if info.include?(",")
+    #       dates << info
+    #     end
+    #   end
+    # end
 
-    combo
+    # combo = []
+    # d = 0
+    # titles.each do |title|
+    #   combo << title
+    #   combo << dates[d]
+    #   d += 1
+    # end
+
+    # combo
   end
 end
