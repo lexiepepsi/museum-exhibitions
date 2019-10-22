@@ -3,7 +3,7 @@ ruby '2.4.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
 # Use sqlite3 as the database for Active Record
-gem 'pg', "~> 0.19"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -44,5 +44,9 @@ gem 'nokogiri'
 group :development, :test do
   gem 'sqlite3', '~> 1.3.11'
   gem 'byebug'
+end
+
+group :production do
+  gem 'pg', "~> 0.19"
 end
  
