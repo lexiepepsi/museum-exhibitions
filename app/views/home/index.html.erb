@@ -27,7 +27,13 @@
   <div class="museum">
     <h3><a href="https://www.metmuseum.org/exhibitions/current-exhibitions">The Met</a></h3>
     <% @met.each do |combo| %>
-      <h4> <%= combo %> </h4>
+      <% if n == 0 %>
+        <h4> <%= combo %></h4>
+        <% n += 1 %>
+      <% elsif n == 1 %>
+        <p> <%= combo %></p>
+        <% n = 0 %>
+      <% end %>
     <% end %>
   </div>
 </div>
