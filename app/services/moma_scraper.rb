@@ -5,7 +5,7 @@ class MomaScraper
   end
 
   def scrape
-    # moma_url = "https://www.moma.org/calendar/exhibitions"
+
     unparsed_page = HTTParty.get(@url)
     parsed_page = Nokogiri::HTML(unparsed_page)
     main = parsed_page.css('main.main')
@@ -45,10 +45,6 @@ class MomaScraper
     combo = []
     d = 0
     exhibitions.each do |exhibition|
-      # exhibition = {
-      #   title: exhibition
-      #   dates: dates[d]
-      # }
       combo << exhibition
       combo << dates[d]
       d += 1
@@ -56,10 +52,6 @@ class MomaScraper
 
     combo
 
-    # byebug
+
   end
 end
-
-# main = parsed_page.css('main.main')
-# second_section = main.css('section.page-section--full-bleed')[1]
-# info = second_section.css('p.balance-text')

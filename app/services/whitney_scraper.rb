@@ -5,7 +5,6 @@ class WhitneyScraper
   end
 
   def scrape
-    # url = "https://whitney.org/exhibitions"
     unparsed_page = HTTParty.get(@url)
     parsed_page = Nokogiri::HTML(unparsed_page)
     exhibitions = parsed_page.css('div.exhibitions')
@@ -33,7 +32,6 @@ class WhitneyScraper
     end
 
     headers
-    # byebug
   end
 
 end

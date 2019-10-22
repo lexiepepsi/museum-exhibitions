@@ -39,9 +39,10 @@ gem 'spring',        group: :development
 
 gem 'httparty'
 gem 'nokogiri'
-gem 'byebug'
+
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.11'
+  gem 'byebug'
 end
  
