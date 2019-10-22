@@ -4,12 +4,18 @@
 
 <div>
   <!-- <h3><a href="https://www.metmuseum.org/exhibitions/current-exhibitions">The Met</a></h3> -->
-  <!-- <h3><a href="https://www.moma.org/calendar/exhibitions">MoMA</a></h3> -->
+  
   <h3><a href="https://whitney.org/exhibitions">The Whitney</a></h3>
   <% @whitney_headers.each do |header| %>
     <h4> <%= header[:title] %></h4>
     <p> <%= header[:dates] %></p>
   <% end %>
+
+  <h3><a href="https://www.moma.org/calendar/exhibitions">MoMA</a></h3>
+  <% @moma.each do |exhibition| %>
+    <p> <%= exhibition %></p>
+  <% end %>
+
 </div>
 
 <!-- exhibitions = parsed_page.css('div.exhibitions')
