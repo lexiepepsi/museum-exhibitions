@@ -1,27 +1,31 @@
-<header>
-  <h1>Museum Exhibitions in NYC</h1>
-</header>
+<div class="body">
 
-<div>
+  <h1>Museum Exhibitions NYC</h1>
+
+
+
   <!-- <h3><a href="https://www.metmuseum.org/exhibitions/current-exhibitions">The Met</a></h3> -->
-  
-  <h3><a href="https://whitney.org/exhibitions">The Whitney</a></h3>
-  <% @whitney_headers.each do |header| %>
-    <h4> <%= header[:title] %></h4>
-    <p> <%= header[:dates] %></p>
-  <% end %>
-
-  <h3><a href="https://www.moma.org/calendar/exhibitions">MoMA</a></h3>
-  <% n = 0 %>
-  <% @moma.each do |combo| %>
-    <% if n == 0 %>
-      <h4> <%= combo %></h4>
-      <% n += 1 %>
-    <% elsif n == 1 %>
-      <p> <%= combo %></p>
-      <% n = 0 %>
+  <div class="museum">
+    <h3><a href="https://whitney.org/exhibitions">The Whitney</a></h3>
+    <% @whitney_headers.each do |header| %>
+      <h4> <%= header[:title] %></h4>
+      <p> <%= header[:dates] %></p>
     <% end %>
-  <% end %>
+  </div>
+
+  <div class="museum">
+    <h3><a href="https://www.moma.org/calendar/exhibitions">MoMA</a></h3>
+    <% n = 0 %>
+    <% @moma.each do |combo| %>
+      <% if n == 0 %>
+        <h4> <%= combo %></h4>
+        <% n += 1 %>
+      <% elsif n == 1 %>
+        <p> <%= combo %></p>
+        <% n = 0 %>
+      <% end %>
+    <% end %>
+  </div>
 
 </div>
 

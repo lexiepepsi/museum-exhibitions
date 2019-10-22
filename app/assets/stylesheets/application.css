@@ -16,35 +16,55 @@
 
 
 body {
-  background-color: lightskyblue;
+  background-color: dodgerblue;
   font-family: "Optima";
-  text-align: center;
   color: white;
 }
 
 a {
   color: navy;
-  /*text-decoration: none;*/
 }
 
 h1 {
+  background-color: navy;
   font-size: 60px;
-  /*border-bottom: 3px dotted white;*/
+  text-align: center;
+  border: 2px dotted dodgerblue;
+  padding: 20px;
+  color: dodgerblue;
 }
 
 h3 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
   font-size: 40px;
+  text-align: center;
+  border: 1px dotted navy;
 }
 
 h4 {
   font-size: 23px;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+p {
+  padding-left: 25px;
+  padding-right: 23px;
+  color: dodgerblue;
 }
 
 /*header {
   border-bottom: 3px solid white;
 }*/
 
-/*.content {
+.body {
   margin: 10px auto;
-  width: 70%;
-}*/
+  width: 80%;
+}
+
+.museum {
+  background-color: navy;
+  padding-bottom: 20px;
+}
