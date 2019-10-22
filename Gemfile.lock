@@ -79,7 +79,7 @@ GEM
     multi_xml (0.6.0)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
-    pg (1.1.4)
+    pg (0.21.0)
     rack (1.6.11)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -150,7 +150,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   nokogiri
-  pg
+  pg (~> 0.19)
   rails (= 4.2.8)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
