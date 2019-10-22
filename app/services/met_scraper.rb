@@ -9,11 +9,6 @@ class MetScraper
     parsed_page = Nokogiri::HTML(unparsed_page)
 
     general_content = parsed_page.css('div.general-content')
-    # titles = []
-    # general_content.css('a').each do |title|
-    #   titles << title.text
-    # end
-    # titles
 
     titles = []
     general_content.css('p').each do |title|
@@ -44,6 +39,5 @@ class MetScraper
     end
 
     combo
-
   end
 end
